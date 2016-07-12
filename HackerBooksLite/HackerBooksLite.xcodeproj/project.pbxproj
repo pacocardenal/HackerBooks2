@@ -196,8 +196,8 @@
 				TargetAttributes = {
 					ED8E53FC1D359AB100DD8F94 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = SBRX27874T;
-						DevelopmentTeamName = "AGBO Business Architecture, SL";
+						DevelopmentTeam = L74TMB66P4;
+						DevelopmentTeamName = "Fernando Rodríguez Romero (Personal Team)";
 						ProvisioningStyle = Automatic;
 					};
 					ED8E54121D359AB100DD8F94 = {
@@ -507,6 +507,7 @@
 				ED8E54291D359AB100DD8F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED8E542A1D359AB100DD8F94 /* Build configuration list for PBXNativeTarget "HackerBooksLiteTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				ED8E542C1D359AB100DD8F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED8E542D1D359AB100DD8F94 /* Build configuration list for PBXNativeTarget "HackerBooksLiteUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +525,7 @@
 				ED8E542F1D359AB100DD8F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
