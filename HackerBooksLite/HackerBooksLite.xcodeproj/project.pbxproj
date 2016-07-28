@@ -15,6 +15,7 @@
 		ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */; };
 		ED8E54181D359AB100DD8F94 /* HackerBooksLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54171D359AB100DD8F94 /* HackerBooksLiteTests.swift */; };
 		ED8E54231D359AB100DD8F94 /* HackerBooksLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54221D359AB100DD8F94 /* HackerBooksLiteUITests.swift */; };
+		EDEFFBD91D35AC8200A5E75C /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		ED8E541E1D359AB100DD8F94 /* HackerBooksLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerBooksLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8E54221D359AB100DD8F94 /* HackerBooksLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerBooksLiteUITests.swift; sourceTree = "<group>"; };
 		ED8E54241D359AB100DD8F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,8 @@
 		ED8E53FF1D359AB100DD8F94 /* HackerBooksLite */ = {
 			isa = PBXGroup;
 			children = (
+				EDEFFBD51D35AAA700A5E75C /* App */,
+				EDEFFBD41D35AA9D00A5E75C /* Frameworks */,
 				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
 				ED8E54021D359AB100DD8F94 /* MasterViewController.swift */,
 				ED8E54041D359AB100DD8F94 /* DetailViewController.swift */,
@@ -126,6 +130,37 @@
 				ED8E54241D359AB100DD8F94 /* Info.plist */,
 			);
 			path = HackerBooksLiteUITests;
+			sourceTree = "<group>";
+		};
+		EDEFFBD41D35AA9D00A5E75C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDEFFBD51D35AAA700A5E75C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EDEFFBD71D35AAF300A5E75C /* NetworkUtils */,
+				EDEFFBD61D35AAB300A5E75C /* Resources */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		EDEFFBD61D35AAB300A5E75C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EDEFFBD71D35AAF300A5E75C /* NetworkUtils */ = {
+			isa = PBXGroup;
+			children = (
+				EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */,
+			);
+			name = NetworkUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +305,7 @@
 			files = (
 				ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */,
 				ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */,
+				EDEFFBD91D35AC8200A5E75C /* AsyncData.swift in Sources */,
 				ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
