@@ -15,6 +15,10 @@
 		ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */; };
 		ED8E54181D359AB100DD8F94 /* HackerBooksLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54171D359AB100DD8F94 /* HackerBooksLiteTests.swift */; };
 		ED8E54231D359AB100DD8F94 /* HackerBooksLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54221D359AB100DD8F94 /* HackerBooksLiteUITests.swift */; };
+		EDC9E1791D4A724D00E4D047 /* MultiDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */; };
+		EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
+		EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
+		EDC9E1821D4BB39700E4D047 /* SetAndDictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */; };
 		EDEFFBD91D35AC8200A5E75C /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +54,9 @@
 		ED8E541E1D359AB100DD8F94 /* HackerBooksLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerBooksLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8E54221D359AB100DD8F94 /* HackerBooksLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerBooksLiteUITests.swift; sourceTree = "<group>"; };
 		ED8E54241D359AB100DD8F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionaryTests.swift; sourceTree = "<group>"; };
+		EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
+		EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAndDictTests.swift; sourceTree = "<group>"; };
 		EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +124,8 @@
 		ED8E54161D359AB100DD8F94 /* HackerBooksLiteTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED8E54171D359AB100DD8F94 /* HackerBooksLiteTests.swift */,
+				EDC9E17B1D4A74A000E4D047 /* App */,
+				EDC9E17A1D4A748900E4D047 /* Framework */,
 				ED8E54191D359AB100DD8F94 /* Info.plist */,
 			);
 			path = HackerBooksLiteTests;
@@ -132,6 +140,31 @@
 			path = HackerBooksLiteUITests;
 			sourceTree = "<group>";
 		};
+		EDC9E17A1D4A748900E4D047 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		EDC9E17B1D4A74A000E4D047 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ED8E54171D359AB100DD8F94 /* HackerBooksLiteTests.swift */,
+				EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		EDC9E17F1D4AA2AD00E4D047 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */,
+			);
+			name = DataStructures;
+			sourceTree = "<group>";
+		};
 		EDEFFBD41D35AA9D00A5E75C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				EDEFFBD71D35AAF300A5E75C /* NetworkUtils */,
+				EDC9E17F1D4AA2AD00E4D047 /* DataStructures */,
 				EDEFFBD61D35AAB300A5E75C /* Resources */,
 			);
 			name = App;
@@ -303,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
 				ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */,
 				ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */,
 				EDEFFBD91D35AC8200A5E75C /* AsyncData.swift in Sources */,
@@ -314,7 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC9E1821D4BB39700E4D047 /* SetAndDictTests.swift in Sources */,
 				ED8E54181D359AB100DD8F94 /* HackerBooksLiteTests.swift in Sources */,
+				EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
+				EDC9E1791D4A724D00E4D047 /* MultiDictionaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

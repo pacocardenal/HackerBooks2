@@ -22,7 +22,7 @@ struct AsyncData{
         self.url = url
         self.data = defaultData
         //MARK: -
-        let fm = FileManager.default()
+        let fm = FileManager.default
         let local = localURL(forRemoteURL: url)
         if fm.fileExists(atPath: local.path!){
             data = try! Data(contentsOf: local as URL)
@@ -35,7 +35,7 @@ struct AsyncData{
     private func sandboxSubfolderURL() -> URL{
         
         
-        let fm = FileManager.default()
+        let fm = FileManager.default
         let urls = fm.urlsForDirectory(.cachesDirectory, inDomains:.userDomainMask)
         let url = try! urls.last?.appendingPathComponent("\(self.dynamicType)")
         
@@ -46,7 +46,7 @@ struct AsyncData{
     private func localURL(forRemoteURL remoteURL: URL)  -> URL{
         
         let fileName = remoteURL.lastPathComponent
-        return sandboxSubfolderURL().appendingPathComponent(fileName!)
+        return try! sandboxSubfolderURL().appendingPathComponent(fileName!)
         
     }
     
