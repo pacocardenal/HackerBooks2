@@ -19,7 +19,6 @@
 		EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
 		EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
 		EDC9E1821D4BB39700E4D047 /* SetAndDictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */; };
-		EDEFFBD91D35AC8200A5E75C /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionaryTests.swift; sourceTree = "<group>"; };
 		EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
 		EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAndDictTests.swift; sourceTree = "<group>"; };
-		EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +190,6 @@
 		EDEFFBD71D35AAF300A5E75C /* NetworkUtils */ = {
 			isa = PBXGroup;
 			children = (
-				EDEFFBD81D35AC8200A5E75C /* AsyncData.swift */,
 			);
 			name = NetworkUtils;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
 				ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */,
 				ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */,
-				EDEFFBD91D35AC8200A5E75C /* AsyncData.swift in Sources */,
 				ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
