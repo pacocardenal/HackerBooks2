@@ -45,6 +45,41 @@ struct MultiDictionary<Key : Hashable, Value : Hashable>{
         return _dict.isEmpty
     }
     
+    public
+    var countBuckets : Int {
+        return _dict.count
+    }
+    
+    public
+    var countUnique : Int {
+        var tally = Bucket()
+        
+        for bucket in _dict.values{
+            tally = tally.union(bucket)
+        }
+        
+        return tally.count
+    }
+    
+    public
+    var count : Int{
+        
+        var tally = 0
+        for bucket in _dict.values{
+            tally += bucket.count
+        }
+        return tally
+    }
+    
+    public
+    var keys : LazyMapCollection<Dictionary<Key, Bucket>,Key> {
+        return _dict.keys
+    }
+    
+    public
+    var buckets : LazyMapCollection<Dictionary<Key, Bucket>,Bucket> {
+        return _dict.values
+    }
     // Takes a key and returns an optional Bucket. If the key is not present,
     // returns .None.
     // The setter takes a Bucket and adds its contents to the existing Bucket
@@ -55,15 +90,37 @@ struct MultiDictionary<Key : Hashable, Value : Hashable>{
             return _dict[key]
         }
         
-//        set(maybeNewBucket){
-//            guard let newBucket = maybeNewBucket else{
-//                return
-//            }
-//        
-//            
-//        }
+        set(maybeNewBucket){
+            guard let newBucket = maybeNewBucket else{
+                // Adding an empty optional is a NOP
+                return
+            }
+        
+            guard let previous = _dict[key] else{
+                // if there was nothing for that kye, just the add the new bucket
+                _dict[key] = newBucket
+                return
+            }
+            
+            // Otherwise create a union of old and new
+            _dict[key] = previous.union(newBucket)
+        }
     }
     
+    // Inserts a value into an existing bucket, or creates a new bucket if
+    // necessary.
+    // If the value is already in the bucket, does nothing.
+    // For a method to mutate a struct, it must be marked as 'mutating'
+    public
+    mutating func insert(value: Value, forKey key: Key){
+        
+        if var previous = _dict[key] {
+            previous.insert(value)
+            _dict[key] = previous
+        }else{
+            _dict[key] = [value]
+        }
+    }
 }
 
 

@@ -10,7 +10,8 @@ import XCTest
 
 class MultiDictionaryTests: XCTestCase {
     
-    let d: MultiDictionary <String, String> = MultiDictionary()
+    var d: MultiDictionary <String, String> = MultiDictionary()
+    typealias StringBucket = MultiDictionary<String,String>.Bucket
     
     override func setUp() {
         super.setUp()
@@ -26,25 +27,73 @@ class MultiDictionaryTests: XCTestCase {
         XCTAssertTrue(d.isEmpty)
     }
     
+    func testThatAskingForNonExistingValueReturnsNil(){
+        XCTAssertNil(d["nothing here for ya"])
+    }
     
+    func testGetAndSetBucket(){
+        
+        let bucket : StringBucket = ["Valar Dohaeris"]
+        d["Valar Morghulis"] = bucket
+        
+        XCTAssertEqual(bucket, d["Valar Morghulis"])
+        
+    }
+    func testThatAddingNilBucketIsNOP(){
+        
+        let nothing : StringBucket? = nil
+        
+        d["nothing"] = nothing
+        
+        XCTAssertTrue(d.isEmpty)
+        XCTAssertNil(d["nothing"])
+        
+    }
     
-//    func testSubscript(){
-//        
-//    
-//        let value = d["Lucas"]
-//        
-//        // getter
-//        XCTAssertNil(value, "Should be empty")
-//        
-//        
-//        // setter
-//        d["Lucas"] = "Grijander"
-//        XCTAssertFalse(d.isEmpty)
-//        
-//        let b = d["Lucas"]!.contains("Grijander")
-//        XCTAssertTrue(b)
-//        
-//        
-//        
-//    }
+    func testCountBuckets(){
+        
+        XCTAssertEqual(d.countBuckets, 0)
+        d["Stark"] = ["Ned", "Bran", "Robb", "Sansa", "Arya", "Jon"]
+        XCTAssertEqual(d.countBuckets, 1)
+
+    }
+    
+    func testCountUniqueElements(){
+    
+        XCTAssertEqual(d.countUnique, 0)
+        d["Stark"] = ["Ned", "Bran", "Robb", "Sansa", "Arya", "Jon"]
+        XCTAssertEqual(d.countUnique, 6)
+        d["males"] = ["Ned", "Bran", "Robb", "Jon"]
+        XCTAssertEqual(d.countUnique, 6)
+        
+    }
+    
+    func testCount(){
+        XCTAssertEqual(d.count, 0)
+        d["Stark"] = ["Ned", "Bran", "Robb", "Sansa", "Arya", "Jon"]
+        XCTAssertEqual(d.count, 6)
+        d["males"] = ["Ned", "Bran", "Robb", "Jon"]
+        XCTAssertEqual(d.count, 10)
+    }
+    
+    func testKeysAndBuckets(){
+        
+        d["Stark"] = ["Ned", "Bran", "Robb", "Sansa", "Arya", "Jon"]
+        XCTAssertEqual(d.keys.count, 1)
+        d["males"] = ["Ned", "Bran", "Robb", "Jon"]
+        XCTAssertEqual(d.keys.count, 2)
+        
+        
+    }
+    func testInsertionOfValueForKey(){
+        
+        // if there was nothing, a new bucket is created
+        d.insert(value: "Daenerys", forKey: "Targaryen")
+        
+        XCTAssertEqual(d.countBuckets, 1)
+        
+    
+        
+    }
+    
 }
