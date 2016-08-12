@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED07720F1D595AE60074331F /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07720E1D595AE60074331F /* AsyncData.swift */; };
 		ED4908A61D5D34C300212410 /* Targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4908A51D5D34C300212410 /* Targaryen.png */; };
+		ED4908A41D5D02DA00212410 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4908A31D5D02DA00212410 /* Books.swift */; };
 		ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54001D359AB100DD8F94 /* AppDelegate.swift */; };
 		ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54021D359AB100DD8F94 /* MasterViewController.swift */; };
 		ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54041D359AB100DD8F94 /* DetailViewController.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		ED07720E1D595AE60074331F /* AsyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncData.swift; sourceTree = "<group>"; };
 		ED4908A51D5D34C300212410 /* Targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Targaryen.png; sourceTree = "<group>"; };
+		ED4908A31D5D02DA00212410 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		ED8E53FD1D359AB100DD8F94 /* HackerBooksLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooksLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8E54001D359AB100DD8F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED8E54021D359AB100DD8F94 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED4908A21D5D02BA00212410 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED4908A31D5D02DA00212410 /* Books.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		ED8E53F41D359AB100DD8F94 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		EDEFFBD51D35AAA700A5E75C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				ED4908A21D5D02BA00212410 /* Model */,
 				EDEFFBD71D35AAF300A5E75C /* NetworkUtils */,
 				EDC9E17F1D4AA2AD00E4D047 /* DataStructures */,
 				EDEFFBD61D35AAB300A5E75C /* Resources */,
@@ -341,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4908A41D5D02DA00212410 /* Books.swift in Sources */,
 				EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
 				ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */,
 				ED07720F1D595AE60074331F /* AsyncData.swift in Sources */,
