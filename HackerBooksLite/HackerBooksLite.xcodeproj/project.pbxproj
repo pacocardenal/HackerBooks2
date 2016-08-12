@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED07720F1D595AE60074331F /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07720E1D595AE60074331F /* AsyncData.swift */; };
+		ED4908A61D5D34C300212410 /* Targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4908A51D5D34C300212410 /* Targaryen.png */; };
 		ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54001D359AB100DD8F94 /* AppDelegate.swift */; };
 		ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54021D359AB100DD8F94 /* MasterViewController.swift */; };
 		ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54041D359AB100DD8F94 /* DetailViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		ED07720E1D595AE60074331F /* AsyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncData.swift; sourceTree = "<group>"; };
+		ED4908A51D5D34C300212410 /* Targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Targaryen.png; sourceTree = "<group>"; };
 		ED8E53FD1D359AB100DD8F94 /* HackerBooksLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooksLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8E54001D359AB100DD8F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED8E54021D359AB100DD8F94 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		ED8E53FF1D359AB100DD8F94 /* HackerBooksLite */ = {
 			isa = PBXGroup;
 			children = (
+				ED4908A51D5D34C300212410 /* Targaryen.png */,
 				EDEFFBD51D35AAA700A5E75C /* App */,
 				EDEFFBD41D35AA9D00A5E75C /* Frameworks */,
 				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
@@ -310,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4908A61D5D34C300212410 /* Targaryen.png in Resources */,
 				ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */,
 				ED8E540A1D359AB100DD8F94 /* Assets.xcassets in Resources */,
 				ED8E54081D359AB100DD8F94 /* Main.storyboard in Resources */,
