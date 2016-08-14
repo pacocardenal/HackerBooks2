@@ -14,8 +14,6 @@ import UIKit
 typealias Author = String
 typealias Authors = [Author]
 typealias Title = String
-typealias Tag = String
-typealias Tags = [Tag]
 typealias PDF = AsyncData
 typealias Image = AsyncData
 
@@ -45,3 +43,6 @@ class Book{
     
     
 }
+
+
+
