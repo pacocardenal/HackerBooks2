@@ -8,7 +8,23 @@
 
 import Foundation
 
-
-typealias Tag = String
 typealias Tags = [Tag]
 
+
+struct TagConstants{
+    static let favoriteTag = "Favorite"
+}
+
+struct Tag {
+    
+    let _name : String
+    
+    init(name: String) {
+        _name = name.capitalized
+    }
+    
+    static func favoriteTag()->Tag{
+        return self.init(name: TagConstants.favoriteTag)
+    }
+    
+}
