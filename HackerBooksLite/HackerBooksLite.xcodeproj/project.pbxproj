@@ -10,6 +10,11 @@
 		ED07720F1D595AE60074331F /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07720E1D595AE60074331F /* AsyncData.swift */; };
 		ED0788C21D60D8F200C4773C /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788C11D60D8F200C4773C /* Tags.swift */; };
 		ED0788C31D60D8F200C4773C /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788C11D60D8F200C4773C /* Tags.swift */; };
+		ED0788C51D60E07D00C4773C /* TagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788C41D60E07D00C4773C /* TagTests.swift */; };
+		ED0788C71D60E2AF00C4773C /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788C61D60E2AF00C4773C /* BookTests.swift */; };
+		ED0788C81D60FD2500C4773C /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4908A31D5D02DA00212410 /* Books.swift */; };
+		ED0788C91D60FDDE00C4773C /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07720E1D595AE60074331F /* AsyncData.swift */; };
+		ED0788CA1D61071E00C4773C /* Targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4908A51D5D34C300212410 /* Targaryen.png */; };
 		ED4908A41D5D02DA00212410 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4908A31D5D02DA00212410 /* Books.swift */; };
 		ED4908A61D5D34C300212410 /* Targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4908A51D5D34C300212410 /* Targaryen.png */; };
 		ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54001D359AB100DD8F94 /* AppDelegate.swift */; };
@@ -46,6 +51,8 @@
 /* Begin PBXFileReference section */
 		ED07720E1D595AE60074331F /* AsyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncData.swift; sourceTree = "<group>"; };
 		ED0788C11D60D8F200C4773C /* Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
+		ED0788C41D60E07D00C4773C /* TagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
+		ED0788C61D60E2AF00C4773C /* BookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		ED4908A31D5D02DA00212410 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		ED4908A51D5D34C300212410 /* Targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Targaryen.png; sourceTree = "<group>"; };
 		ED8E53FD1D359AB100DD8F94 /* HackerBooksLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooksLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +177,8 @@
 			children = (
 				ED8E54171D359AB100DD8F94 /* HackerBooksLiteTests.swift */,
 				EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */,
+				ED0788C41D60E07D00C4773C /* TagTests.swift */,
+				ED0788C61D60E2AF00C4773C /* BookTests.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -339,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0788CA1D61071E00C4773C /* Targaryen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +381,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC9E1821D4BB39700E4D047 /* SetAndDictTests.swift in Sources */,
+				ED0788C71D60E2AF00C4773C /* BookTests.swift in Sources */,
 				ED8E54181D359AB100DD8F94 /* HackerBooksLiteTests.swift in Sources */,
+				ED0788C91D60FDDE00C4773C /* AsyncData.swift in Sources */,
 				EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
+				ED0788C81D60FD2500C4773C /* Books.swift in Sources */,
 				ED0788C31D60D8F200C4773C /* Tags.swift in Sources */,
+				ED0788C51D60E07D00C4773C /* TagTests.swift in Sources */,
 				EDC9E1791D4A724D00E4D047 /* MultiDictionaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
