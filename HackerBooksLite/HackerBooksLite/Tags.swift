@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Tags = [Tag]
+typealias Tags = Set<Tag>
 
 
 struct TagConstants{
@@ -57,6 +57,9 @@ extension Tag: Comparable{
         
         if lhs.isFavorite(){
             return true
+        }
+        else if rhs.isFavorite(){
+            return false
         }else{
             return lhs._name < rhs._name
         }
