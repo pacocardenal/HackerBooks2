@@ -76,8 +76,10 @@ extension Book{
         set{
             if newValue == true{
                 addFavoriteTag()
+                sendNotification()
             }else{
                 removeFavoriteTag()
+                sendNotification()
             }
         }
         
