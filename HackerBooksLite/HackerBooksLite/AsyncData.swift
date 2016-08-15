@@ -17,7 +17,7 @@ class  AsyncData {
     
     private let url     : URL
     public var data    : Data
-    public var delegate: AsyncDataDelegate?
+    weak public var delegate: AsyncDataDelegate?
     
     
     init(url: URL, defaultData : Data){
@@ -125,7 +125,7 @@ class  AsyncData {
 
 //MARK: - Delegate
 public
-protocol AsyncDataDelegate {
+protocol AsyncDataDelegate : class{
     
     func asyncData(_ sender: AsyncData, shouldStartLoadingFrom url: URL )->Bool
     func asyncData(_ sender: AsyncData, willStartLoadingFrom url: URL)
@@ -133,7 +133,7 @@ protocol AsyncDataDelegate {
     
 }
 // Default implemntation for infrequently used methods
-extension AsyncDataDelegate{
+extension AsyncDataDelegate {
     func asyncData(_ sender: AsyncData, shouldStartLoadingFrom url: URL )->Bool{
         return true
     }
