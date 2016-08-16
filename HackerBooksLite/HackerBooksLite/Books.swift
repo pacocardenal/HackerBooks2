@@ -27,6 +27,9 @@ class Book{
 
     weak var delegate    : BookDelegate?
     
+    var tags : Tags{
+        return _tags
+    }
 
     
     init(title: Title, authors: Authors,

@@ -9,7 +9,7 @@
 import Foundation
 
 typealias Tags = Set<Tag>
-
+typealias TagName = String
 
 struct TagConstants{
     static let favoriteTag = "Favorite"
@@ -17,9 +17,9 @@ struct TagConstants{
 
 struct Tag{
     
-    let _name : String
+    let _name : TagName
     
-    init(name: String) {
+    init(name: TagName) {
         _name = name.capitalized
     }
     

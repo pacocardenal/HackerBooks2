@@ -91,9 +91,7 @@ class MultiDictionaryTests: XCTestCase {
         d.insert(value: "Daenerys", forKey: "Targaryen")
         
         XCTAssertEqual(d.countBuckets, 1)
-        
-    
-        
+   
     }
     
 }
