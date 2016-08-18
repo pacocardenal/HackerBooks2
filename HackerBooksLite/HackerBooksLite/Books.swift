@@ -30,6 +30,10 @@ class Book{
     var tags : Tags{
         return _tags
     }
+    
+    var title : Title{
+        return _title
+    }
 
     
     init(title: Title, authors: Authors,
@@ -104,7 +108,8 @@ extension Book: Hashable{
 
 extension Book : Equatable{
     private var proxyForComparison : String{
-        return "\(_title)\(formattedListOfAuthors())"
+        // Favorite always first
+        return "\(isFavorite ? "A" : "Z")\(_title)\(formattedListOfAuthors())"
     }
     
     static func ==(lhs: Book, rhs: Book) -> Bool{
