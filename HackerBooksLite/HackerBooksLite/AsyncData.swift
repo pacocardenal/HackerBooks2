@@ -15,7 +15,7 @@ import UIKit
 public
 class  AsyncData {
     
-    private let url     : URL
+    let url     : URL
     public var data    : Data
     weak public var delegate: AsyncDataDelegate?
     
@@ -80,14 +80,13 @@ class  AsyncData {
         
     }
     //MARK: - Utils
-    private
     class func sandboxSubfolderURL() -> URL{
         
         
         let fm = FileManager.default
         let urls = fm.urls(for: .cachesDirectory, in: .userDomainMask)
         
-        guard let url = urls.last?.appendingPathComponent("\(self.dynamicType)") else {
+        guard let url = urls.last?.appendingPathComponent("\(type(of:self))") else {
             fatalError("Unable to create url for local storage at \(urls)")
         }
         
@@ -107,7 +106,6 @@ class  AsyncData {
         
     }
     
-    private
     func localURL(forRemoteURL remoteURL: URL)  -> URL{
         
         // Sind it could happen that 2 images with different URLs
@@ -148,7 +146,6 @@ extension AsyncDataDelegate {
 let AsyncDataDidEndLoading = Notification.Name(rawValue: "io.keepCoding.AsyncDataDidEndLoading")
 
 extension AsyncData{
-    private
     func sendNotification(){
         
         let n = Notification(name: AsyncDataDidEndLoading,

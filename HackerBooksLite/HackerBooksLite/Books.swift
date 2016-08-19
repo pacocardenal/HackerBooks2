@@ -19,11 +19,11 @@ typealias Image = AsyncData
 
 
 class Book{
-    private let _authors : Authors
-    private let _title   : Title
-    private var _tags    : Tags
-    private let _pdf     : PDF
-    private let _image   : Image
+    let _authors : Authors
+    let _title   : Title
+    var _tags    : Tags
+    let _pdf     : PDF
+    let _image   : Image
 
     weak var delegate    : BookDelegate?
     
@@ -96,7 +96,7 @@ extension Book{
 //MARK: - Protocols
 extension Book: Hashable{
     
-    private var proxyForHashing : String{
+    var proxyForHashing : String{
         get{
             return "\(_title)\(_authors)\(_tags)"
         }
@@ -107,7 +107,7 @@ extension Book: Hashable{
 }
 
 extension Book : Equatable{
-    private var proxyForComparison : String{
+    var proxyForComparison : String{
         // Favorite always first
         return "\(isFavorite ? "A" : "Z")\(_title)\(formattedListOfAuthors())"
     }
@@ -133,7 +133,7 @@ protocol BookDelegate: class{
 let BookDidChange = Notification.Name(rawValue: "io.keepCoding.BookDidChange")
 
 extension Book{
-    private
+    
     func sendNotification(){
         
         let n = Notification(name: BookDidChange, object: self, userInfo: [:])
