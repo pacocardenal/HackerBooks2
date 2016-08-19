@@ -26,6 +26,8 @@
 		ED8E54231D359AB100DD8F94 /* HackerBooksLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54221D359AB100DD8F94 /* HackerBooksLiteUITests.swift */; };
 		EDA79C4A1D63AF98001A27F7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788CB1D6165A000C4773C /* Library.swift */; };
 		EDA79C4B1D63AF99001A27F7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788CB1D6165A000C4773C /* Library.swift */; };
+		EDA79C571D66A219001A27F7 /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA79C551D66A219001A27F7 /* Controllers.swift */; };
+		EDA79C581D66A219001A27F7 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA79C561D66A219001A27F7 /* LibraryViewController.swift */; };
 		EDC9E1791D4A724D00E4D047 /* MultiDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */; };
 		EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
 		EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
@@ -70,6 +72,8 @@
 		ED8E541E1D359AB100DD8F94 /* HackerBooksLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerBooksLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8E54221D359AB100DD8F94 /* HackerBooksLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerBooksLiteUITests.swift; sourceTree = "<group>"; };
 		ED8E54241D359AB100DD8F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA79C551D66A219001A27F7 /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
+		EDA79C561D66A219001A27F7 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionaryTests.swift; sourceTree = "<group>"; };
 		EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
 		EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAndDictTests.swift; sourceTree = "<group>"; };
@@ -166,6 +170,15 @@
 			path = HackerBooksLiteUITests;
 			sourceTree = "<group>";
 		};
+		EDA79C591D66A226001A27F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDA79C551D66A219001A27F7 /* Controllers.swift */,
+				EDA79C561D66A219001A27F7 /* LibraryViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		EDC9E17A1D4A748900E4D047 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +215,7 @@
 		EDEFFBD51D35AAA700A5E75C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EDA79C591D66A226001A27F7 /* Controllers */,
 				ED4908A21D5D02BA00212410 /* Model */,
 				EDEFFBD71D35AAF300A5E75C /* NetworkUtils */,
 				EDC9E17F1D4AA2AD00E4D047 /* DataStructures */,
@@ -373,7 +387,9 @@
 				ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */,
 				ED07720F1D595AE60074331F /* AsyncData.swift in Sources */,
 				EDA79C4A1D63AF98001A27F7 /* Library.swift in Sources */,
+				EDA79C581D66A219001A27F7 /* LibraryViewController.swift in Sources */,
 				ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */,
+				EDA79C571D66A219001A27F7 /* Controllers.swift in Sources */,
 				ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
