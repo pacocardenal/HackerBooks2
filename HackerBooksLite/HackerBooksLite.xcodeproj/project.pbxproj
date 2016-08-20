@@ -28,6 +28,15 @@
 		EDA79C4B1D63AF99001A27F7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788CB1D6165A000C4773C /* Library.swift */; };
 		EDA79C571D66A219001A27F7 /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA79C551D66A219001A27F7 /* Controllers.swift */; };
 		EDA79C581D66A219001A27F7 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA79C561D66A219001A27F7 /* LibraryViewController.swift */; };
+		EDB3AE691D67A5F70023A807 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3AE681D67A5F70023A807 /* JSONProcessing.swift */; };
+		EDB3AE6A1D67A5F70023A807 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3AE681D67A5F70023A807 /* JSONProcessing.swift */; };
+		EDB3AE6C1D67E2000023A807 /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE6B1D67E2000023A807 /* books_readable.json */; };
+		EDB3AE6D1D67E2000023A807 /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE6B1D67E2000023A807 /* books_readable.json */; };
+		EDB3AE741D67F5ED0023A807 /* JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3AE731D67F5ED0023A807 /* JSONTests.swift */; };
+		EDB3AE761D68048D0023A807 /* emptyBookCover.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE751D68048D0023A807 /* emptyBookCover.png */; };
+		EDB3AE771D68048D0023A807 /* emptyBookCover.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE751D68048D0023A807 /* emptyBookCover.png */; };
+		EDB3AE791D6805230023A807 /* emptyPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE781D6805230023A807 /* emptyPdf.pdf */; };
+		EDB3AE7A1D6805230023A807 /* emptyPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE781D6805230023A807 /* emptyPdf.pdf */; };
 		EDC9E1791D4A724D00E4D047 /* MultiDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */; };
 		EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
 		EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
@@ -74,6 +83,11 @@
 		ED8E54241D359AB100DD8F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDA79C551D66A219001A27F7 /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
 		EDA79C561D66A219001A27F7 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		EDB3AE681D67A5F70023A807 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
+		EDB3AE6B1D67E2000023A807 /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
+		EDB3AE731D67F5ED0023A807 /* JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTests.swift; sourceTree = "<group>"; };
+		EDB3AE751D68048D0023A807 /* emptyBookCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyBookCover.png; sourceTree = "<group>"; };
+		EDB3AE781D6805230023A807 /* emptyPdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = emptyPdf.pdf; sourceTree = "<group>"; };
 		EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionaryTests.swift; sourceTree = "<group>"; };
 		EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
 		EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAndDictTests.swift; sourceTree = "<group>"; };
@@ -110,6 +124,7 @@
 				ED4908A31D5D02DA00212410 /* Books.swift */,
 				ED0788C11D60D8F200C4773C /* Tags.swift */,
 				ED0788CB1D6165A000C4773C /* Library.swift */,
+				EDB3AE681D67A5F70023A807 /* JSONProcessing.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -193,6 +208,7 @@
 				EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */,
 				ED0788C41D60E07D00C4773C /* TagTests.swift */,
 				ED0788C61D60E2AF00C4773C /* BookTests.swift */,
+				EDB3AE731D67F5ED0023A807 /* JSONTests.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -227,6 +243,9 @@
 		EDEFFBD61D35AAB300A5E75C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EDB3AE751D68048D0023A807 /* emptyBookCover.png */,
+				EDB3AE781D6805230023A807 /* emptyPdf.pdf */,
+				EDB3AE6B1D67E2000023A807 /* books_readable.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -352,9 +371,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB3AE6C1D67E2000023A807 /* books_readable.json in Resources */,
 				ED4908A61D5D34C300212410 /* Targaryen.png in Resources */,
+				EDB3AE791D6805230023A807 /* emptyPdf.pdf in Resources */,
 				ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */,
 				ED8E540A1D359AB100DD8F94 /* Assets.xcassets in Resources */,
+				EDB3AE761D68048D0023A807 /* emptyBookCover.png in Resources */,
 				ED8E54081D359AB100DD8F94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +385,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB3AE6D1D67E2000023A807 /* books_readable.json in Resources */,
+				EDB3AE7A1D6805230023A807 /* emptyPdf.pdf in Resources */,
+				EDB3AE771D68048D0023A807 /* emptyBookCover.png in Resources */,
 				ED0788CA1D61071E00C4773C /* Targaryen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4908A41D5D02DA00212410 /* Books.swift in Sources */,
+				EDB3AE691D67A5F70023A807 /* JSONProcessing.swift in Sources */,
 				EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
 				ED0788C21D60D8F200C4773C /* Tags.swift in Sources */,
 				ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */,
@@ -402,6 +428,8 @@
 				ED0788C71D60E2AF00C4773C /* BookTests.swift in Sources */,
 				ED0788C91D60FDDE00C4773C /* AsyncData.swift in Sources */,
 				EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
+				EDB3AE741D67F5ED0023A807 /* JSONTests.swift in Sources */,
+				EDB3AE6A1D67A5F70023A807 /* JSONProcessing.swift in Sources */,
 				ED0788C81D60FD2500C4773C /* Books.swift in Sources */,
 				ED0788C31D60D8F200C4773C /* Tags.swift in Sources */,
 				EDA79C4B1D63AF99001A27F7 /* Library.swift in Sources */,
