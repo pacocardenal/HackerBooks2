@@ -14,9 +14,7 @@
 		ED0788C71D60E2AF00C4773C /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788C61D60E2AF00C4773C /* BookTests.swift */; };
 		ED0788C81D60FD2500C4773C /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4908A31D5D02DA00212410 /* Books.swift */; };
 		ED0788C91D60FDDE00C4773C /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07720E1D595AE60074331F /* AsyncData.swift */; };
-		ED0788CA1D61071E00C4773C /* Targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4908A51D5D34C300212410 /* Targaryen.png */; };
 		ED4908A41D5D02DA00212410 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4908A31D5D02DA00212410 /* Books.swift */; };
-		ED4908A61D5D34C300212410 /* Targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4908A51D5D34C300212410 /* Targaryen.png */; };
 		ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54001D359AB100DD8F94 /* AppDelegate.swift */; };
 		ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54021D359AB100DD8F94 /* MasterViewController.swift */; };
 		ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54041D359AB100DD8F94 /* DetailViewController.swift */; };
@@ -69,7 +67,6 @@
 		ED0788C61D60E2AF00C4773C /* BookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		ED0788CB1D6165A000C4773C /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		ED4908A31D5D02DA00212410 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
-		ED4908A51D5D34C300212410 /* Targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Targaryen.png; sourceTree = "<group>"; };
 		ED8E53FD1D359AB100DD8F94 /* HackerBooksLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooksLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8E54001D359AB100DD8F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED8E54021D359AB100DD8F94 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +153,6 @@
 		ED8E53FF1D359AB100DD8F94 /* HackerBooksLite */ = {
 			isa = PBXGroup;
 			children = (
-				ED4908A51D5D34C300212410 /* Targaryen.png */,
 				EDEFFBD51D35AAA700A5E75C /* App */,
 				EDEFFBD41D35AA9D00A5E75C /* Frameworks */,
 				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
@@ -386,7 +382,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB3AE6C1D67E2000023A807 /* books_readable.json in Resources */,
-				ED4908A61D5D34C300212410 /* Targaryen.png in Resources */,
 				EDB3AE791D6805230023A807 /* emptyPdf.pdf in Resources */,
 				ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */,
 				ED8E540A1D359AB100DD8F94 /* Assets.xcassets in Resources */,
@@ -402,7 +397,6 @@
 				EDB3AE6D1D67E2000023A807 /* books_readable.json in Resources */,
 				EDB3AE7A1D6805230023A807 /* emptyPdf.pdf in Resources */,
 				EDB3AE771D68048D0023A807 /* emptyBookCover.png in Resources */,
-				ED0788CA1D61071E00C4773C /* Targaryen.png in Resources */,
 				EDB3AE7D1D6A6E370023A807 /* book.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
