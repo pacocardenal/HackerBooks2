@@ -23,6 +23,7 @@ class LibraryViewController: UITableViewController {
     init(model: Library, style : UITableViewStyle = .plain) {
         _model = model
         super.init(nibName: nil, bundle: nil)   // default options
+        title = "HackerBooks"
     }
     
     override func viewWillAppear(_ animated: Bool) {
