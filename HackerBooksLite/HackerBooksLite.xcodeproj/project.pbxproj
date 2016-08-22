@@ -37,6 +37,8 @@
 		EDB3AE771D68048D0023A807 /* emptyBookCover.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE751D68048D0023A807 /* emptyBookCover.png */; };
 		EDB3AE791D6805230023A807 /* emptyPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE781D6805230023A807 /* emptyPdf.pdf */; };
 		EDB3AE7A1D6805230023A807 /* emptyPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE781D6805230023A807 /* emptyPdf.pdf */; };
+		EDB3AE7D1D6A6E370023A807 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE7C1D6A6E370023A807 /* book.json */; };
+		EDB3AE7F1D6A79190023A807 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3AE7E1D6A79190023A807 /* LibraryTests.swift */; };
 		EDC9E1791D4A724D00E4D047 /* MultiDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */; };
 		EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
 		EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
@@ -88,6 +90,8 @@
 		EDB3AE731D67F5ED0023A807 /* JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTests.swift; sourceTree = "<group>"; };
 		EDB3AE751D68048D0023A807 /* emptyBookCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyBookCover.png; sourceTree = "<group>"; };
 		EDB3AE781D6805230023A807 /* emptyPdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = emptyPdf.pdf; sourceTree = "<group>"; };
+		EDB3AE7C1D6A6E370023A807 /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
+		EDB3AE7E1D6A79190023A807 /* LibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
 		EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionaryTests.swift; sourceTree = "<group>"; };
 		EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
 		EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAndDictTests.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		ED8E54161D359AB100DD8F94 /* HackerBooksLiteTests */ = {
 			isa = PBXGroup;
 			children = (
+				EDB3AE7B1D6A6E180023A807 /* Resources */,
 				EDC9E17B1D4A74A000E4D047 /* App */,
 				EDC9E17A1D4A748900E4D047 /* Framework */,
 				ED8E54191D359AB100DD8F94 /* Info.plist */,
@@ -194,6 +199,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		EDB3AE7B1D6A6E180023A807 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDB3AE7C1D6A6E370023A807 /* book.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		EDC9E17A1D4A748900E4D047 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +218,7 @@
 		EDC9E17B1D4A74A000E4D047 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EDB3AE7E1D6A79190023A807 /* LibraryTests.swift */,
 				EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */,
 				ED0788C41D60E07D00C4773C /* TagTests.swift */,
 				ED0788C61D60E2AF00C4773C /* BookTests.swift */,
@@ -389,6 +403,7 @@
 				EDB3AE7A1D6805230023A807 /* emptyPdf.pdf in Resources */,
 				EDB3AE771D68048D0023A807 /* emptyBookCover.png in Resources */,
 				ED0788CA1D61071E00C4773C /* Targaryen.png in Resources */,
+				EDB3AE7D1D6A6E370023A807 /* book.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC9E1821D4BB39700E4D047 /* SetAndDictTests.swift in Sources */,
+				EDB3AE7F1D6A79190023A807 /* LibraryTests.swift in Sources */,
 				ED0788C71D60E2AF00C4773C /* BookTests.swift in Sources */,
 				ED0788C91D60FDDE00C4773C /* AsyncData.swift in Sources */,
 				EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,

@@ -50,10 +50,14 @@ func decode(book dict: JSONDictionary) throws -> Book{
     let tags = Tags(parseCommaSeparated(string: extract(key: "tags")).map{Tag(name: $0)})
     let title = extract(key: "title").capitalized
     
+    let mainBundle = Bundle.main
+    
+    let defaultImage = mainBundle.url(forResource: "emptyBookCover", withExtension: "png")!
+    let defaultPdf = mainBundle.url(forResource: "emptyPdf", withExtension: "pdf")!
+    
     // AsyncData
-
-    let image = AsyncData(url: imgURL, defaultData: try! Data(contentsOf: imgURL))
-    let pdf = AsyncData(url: pdfURL, defaultData: try! Data(contentsOf: pdfURL))
+    let image = AsyncData(url: imgURL, defaultData: try! Data(contentsOf: defaultImage))
+    let pdf = AsyncData(url: pdfURL, defaultData: try! Data(contentsOf: defaultPdf))
     
     
     return Book(title: title, authors: authors, tags: tags, pdf: pdf, image: image)
