@@ -77,6 +77,16 @@ class LibraryTests: XCTestCase {
         XCTAssertTrue(lib!.book(forTagName: "Fantasy", at: 0)!.title == "A storm of swords")
         
     }
+    
+    func testTags(){
+        
+        XCTAssertEqual(lib!.tags.count, 4)
+        XCTAssertEqual(lib!.tags, [Tag(name:"Favorite"),
+                                   Tag(name:"Dragons"),
+                                   Tag(name:"Fantasy"),
+                                   Tag(name:"Knights")])
+        
+    }
 }
 
 

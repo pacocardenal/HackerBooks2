@@ -91,6 +91,13 @@ class Library {
         return books.sorted()[at]
         
     }
+    
+    // Sorted Tags
+    var tags : [Tag]{
+        get{
+            return _books.keys.sorted()
+        }
+    }
 }
 
 

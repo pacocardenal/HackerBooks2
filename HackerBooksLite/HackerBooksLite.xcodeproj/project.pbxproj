@@ -37,6 +37,9 @@
 		EDB3AE7A1D6805230023A807 /* emptyPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE781D6805230023A807 /* emptyPdf.pdf */; };
 		EDB3AE7D1D6A6E370023A807 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE7C1D6A6E370023A807 /* book.json */; };
 		EDB3AE7F1D6A79190023A807 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3AE7E1D6A79190023A807 /* LibraryTests.swift */; };
+		EDB3AE811D6A96F00023A807 /* Targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE801D6A96F00023A807 /* Targaryen.png */; };
+		EDB3AE841D6ACAE80023A807 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3AE821D6ACAE80023A807 /* BookViewController.swift */; };
+		EDB3AE851D6ACAE80023A807 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB3AE831D6ACAE80023A807 /* BookViewController.xib */; };
 		EDC9E1791D4A724D00E4D047 /* MultiDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */; };
 		EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
 		EDC9E17E1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */; };
@@ -89,6 +92,9 @@
 		EDB3AE781D6805230023A807 /* emptyPdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = emptyPdf.pdf; sourceTree = "<group>"; };
 		EDB3AE7C1D6A6E370023A807 /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
 		EDB3AE7E1D6A79190023A807 /* LibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
+		EDB3AE801D6A96F00023A807 /* Targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Targaryen.png; sourceTree = "<group>"; };
+		EDB3AE821D6ACAE80023A807 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		EDB3AE831D6ACAE80023A807 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
 		EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionaryTests.swift; sourceTree = "<group>"; };
 		EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
 		EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAndDictTests.swift; sourceTree = "<group>"; };
@@ -191,6 +197,8 @@
 			children = (
 				EDA79C551D66A219001A27F7 /* Controllers.swift */,
 				EDA79C561D66A219001A27F7 /* LibraryViewController.swift */,
+				EDB3AE821D6ACAE80023A807 /* BookViewController.swift */,
+				EDB3AE831D6ACAE80023A807 /* BookViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 		EDB3AE7B1D6A6E180023A807 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EDB3AE801D6A96F00023A807 /* Targaryen.png */,
 				EDB3AE7C1D6A6E370023A807 /* book.json */,
 			);
 			name = Resources;
@@ -383,6 +392,7 @@
 			files = (
 				EDB3AE6C1D67E2000023A807 /* books_readable.json in Resources */,
 				EDB3AE791D6805230023A807 /* emptyPdf.pdf in Resources */,
+				EDB3AE851D6ACAE80023A807 /* BookViewController.xib in Resources */,
 				ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */,
 				ED8E540A1D359AB100DD8F94 /* Assets.xcassets in Resources */,
 				EDB3AE761D68048D0023A807 /* emptyBookCover.png in Resources */,
@@ -398,6 +408,7 @@
 				EDB3AE7A1D6805230023A807 /* emptyPdf.pdf in Resources */,
 				EDB3AE771D68048D0023A807 /* emptyBookCover.png in Resources */,
 				EDB3AE7D1D6A6E370023A807 /* book.json in Resources */,
+				EDB3AE811D6A96F00023A807 /* Targaryen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +435,7 @@
 				EDA79C4A1D63AF98001A27F7 /* Library.swift in Sources */,
 				EDA79C581D66A219001A27F7 /* LibraryViewController.swift in Sources */,
 				ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */,
+				EDB3AE841D6ACAE80023A807 /* BookViewController.swift in Sources */,
 				EDA79C571D66A219001A27F7 /* Controllers.swift in Sources */,
 				ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */,
 			);
