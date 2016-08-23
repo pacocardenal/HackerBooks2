@@ -13,8 +13,6 @@ class LibraryViewController: UITableViewController {
     private
     let _model : Library
     
-    private
-    let cellId = "BookCell"
     
     var delegate : LibraryViewControllerDelegate?
     
@@ -24,6 +22,12 @@ class LibraryViewController: UITableViewController {
         _model = model
         super.init(nibName: nil, bundle: nil)   // default options
         title = "HackerBooks"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        registerNib()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +44,13 @@ class LibraryViewController: UITableViewController {
     // Hack: this shouldn't be necessary
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Cell registration
+    private func registerNib(){
+        
+        let nib = UINib(nibName: "BookTableViewCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: BookTableViewCell.cellID)
     }
     
     //MARK: - Data Source
@@ -75,21 +86,21 @@ class LibraryViewController: UITableViewController {
         
         
         // Create the cell
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
-        if case .none = cell{
-            // The optional was empty: must create the cell from scratch
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: BookTableViewCell.cellID, for: indexPath) as! BookTableViewCell
+        
         
         // Sync model (book) -> View (cell)
-        let image = UIImage(data: book._image.data)
-        cell?.imageView?.image = image
-        cell?.textLabel?.text = book.title
-        cell?.detailTextLabel?.text = book.formattedListOfAuthors()
+        cell.startObserving(book: book)
         
-        return cell!
+        
+        return cell
         
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return BookTableViewCell.cellHeight
+    }
+    
     
     //MARK: - Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -101,6 +112,13 @@ class LibraryViewController: UITableViewController {
         delegate?.libraryViewController(self, didSelect: book)
         
     }
+    
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // The cell was just hidden: stop observing
+        let cell = tableView.cellForRow(at: indexPath) as! BookTableViewCell
+        cell.stopObserving()
+    }
+    
     //MARK: - Notifications
     // Observes the notifications that come from Book,
     // and reloads the table

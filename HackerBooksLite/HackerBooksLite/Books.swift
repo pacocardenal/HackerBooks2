@@ -41,6 +41,17 @@ class Book{
         
         (_title, _authors, _tags, _pdf, _image) = (title, authors, tags, pdf, image)
         
+        // Set delegate
+        _image.delegate = self
+        //_pdf.delegate = self
+        
+        // Start loading remote data in background
+        DispatchQueue.global(qos: .background).async {
+            self._image.loadData()
+        }
+//        DispatchQueue.global(qos: .background).async {
+//            self._pdf.loadData()
+//        }
     }
     
     func formattedListOfAuthors() -> String{
@@ -83,10 +94,10 @@ extension Book{
         set{
             if newValue == true{
                 addFavoriteTag()
-                sendNotification()
+                sendNotification(name: BookDidChange)
             }else{
                 removeFavoriteTag()
-                sendNotification()
+                sendNotification(name: BookDidChange)
             }
         }
         
@@ -124,24 +135,71 @@ extension Book : Comparable{
 }
 
 
-//MARK: - Communication
+//MARK: - Communication - delegate
 protocol BookDelegate: class{
     func bookDidChange(sender:Book)
+    func bookCoverImageDidDownload(sender: Book)
+    func bookPDFDidDownload(sender: Book)
+}
+
+// Default implementation of delegate methods
+extension BookDelegate{
     
+    func bookDidChange(sender:Book){}
+    func bookCoverImageDidDownload(sender: Book){}
+    func bookPDFDidDownload(sender: Book){}
 }
 
 let BookDidChange = Notification.Name(rawValue: "io.keepCoding.BookDidChange")
+let BookCoverImageDidDownload = Notification.Name(rawValue: "io.keepCoding.BookCoverImageDidDownload")
+let BookPDFDidDownload = Notification.Name(rawValue: "io.keepCoding.BookPDFDidDownload")
 
 extension Book{
     
-    func sendNotification(){
+    func sendNotification(name: Notification.Name){
         
-        let n = Notification(name: BookDidChange, object: self, userInfo: [:])
+        let n = Notification(name: name, object: self, userInfo: [:])
         let nc = NotificationCenter.default
         nc.post(n)
         
     }
 }
+
+
+//MARK: - AsyncDataDelegate
+extension Book: AsyncDataDelegate{
+    
+    func asyncData(_ sender: AsyncData, didEndLoadingFrom url: URL) {
+        
+        let notificationName : Notification.Name
+        
+        
+        switch sender {
+        case _image:
+            notificationName = BookCoverImageDidDownload
+            delegate?.bookCoverImageDidDownload(sender: self)
+            
+        case _pdf:
+            notificationName = BookPDFDidDownload
+            delegate?.bookPDFDidDownload(sender: self)
+            
+        default:
+            fatalError("Should never get here")
+        }
+        
+        
+        sendNotification(name: notificationName)
+    }
+    
+    func asyncData(_ sender: AsyncData, shouldStartLoadingFrom url: URL) -> Bool {
+        return true
+    }
+    
+    func asyncData(_ sender: AsyncData, willStartLoadingFrom url: URL) {
+        print("Starting with \(url)")
+    }
+}
+
 
 
 

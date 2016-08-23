@@ -196,3 +196,34 @@ extension AsyncData{
     
 }
 
+
+//MARK: - Equatable
+extension AsyncData : Equatable{
+    
+    public static func ==(lhs: AsyncData, rhs: AsyncData) -> Bool{
+        return lhs.url == rhs.url
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
