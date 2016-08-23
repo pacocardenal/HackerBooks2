@@ -16,9 +16,6 @@
 		ED0788C91D60FDDE00C4773C /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07720E1D595AE60074331F /* AsyncData.swift */; };
 		ED4908A41D5D02DA00212410 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4908A31D5D02DA00212410 /* Books.swift */; };
 		ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54001D359AB100DD8F94 /* AppDelegate.swift */; };
-		ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54021D359AB100DD8F94 /* MasterViewController.swift */; };
-		ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54041D359AB100DD8F94 /* DetailViewController.swift */; };
-		ED8E54081D359AB100DD8F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8E54061D359AB100DD8F94 /* Main.storyboard */; };
 		ED8E540A1D359AB100DD8F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED8E54091D359AB100DD8F94 /* Assets.xcassets */; };
 		ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */; };
 		ED8E54231D359AB100DD8F94 /* HackerBooksLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E54221D359AB100DD8F94 /* HackerBooksLiteUITests.swift */; };
@@ -74,9 +71,6 @@
 		ED4908A31D5D02DA00212410 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		ED8E53FD1D359AB100DD8F94 /* HackerBooksLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooksLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8E54001D359AB100DD8F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED8E54021D359AB100DD8F94 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		ED8E54041D359AB100DD8F94 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		ED8E54071D359AB100DD8F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED8E54091D359AB100DD8F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED8E540C1D359AB100DD8F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED8E540E1D359AB100DD8F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,9 +160,6 @@
 				EDEFFBD51D35AAA700A5E75C /* App */,
 				EDEFFBD41D35AA9D00A5E75C /* Frameworks */,
 				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
-				ED8E54021D359AB100DD8F94 /* MasterViewController.swift */,
-				ED8E54041D359AB100DD8F94 /* DetailViewController.swift */,
-				ED8E54061D359AB100DD8F94 /* Main.storyboard */,
 				ED8E54091D359AB100DD8F94 /* Assets.xcassets */,
 				ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */,
 				ED8E540E1D359AB100DD8F94 /* Info.plist */,
@@ -411,7 +402,6 @@
 				EDB3AE891D6BC7890023A807 /* BookTableViewCell.xib in Resources */,
 				ED8E540A1D359AB100DD8F94 /* Assets.xcassets in Resources */,
 				EDB3AE761D68048D0023A807 /* emptyBookCover.png in Resources */,
-				ED8E54081D359AB100DD8F94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +436,9 @@
 				EDB3AE881D6BC7890023A807 /* BookTableViewCell.swift in Sources */,
 				EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
 				ED0788C21D60D8F200C4773C /* Tags.swift in Sources */,
-				ED8E54051D359AB100DD8F94 /* DetailViewController.swift in Sources */,
 				ED07720F1D595AE60074331F /* AsyncData.swift in Sources */,
 				EDA79C4A1D63AF98001A27F7 /* Library.swift in Sources */,
 				EDA79C581D66A219001A27F7 /* LibraryViewController.swift in Sources */,
-				ED8E54031D359AB100DD8F94 /* MasterViewController.swift in Sources */,
 				EDB3AE841D6ACAE80023A807 /* BookViewController.swift in Sources */,
 				EDA79C571D66A219001A27F7 /* Controllers.swift in Sources */,
 				ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */,
@@ -500,14 +488,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ED8E54061D359AB100DD8F94 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED8E54071D359AB100DD8F94 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
