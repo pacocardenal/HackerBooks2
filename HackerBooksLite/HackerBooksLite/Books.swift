@@ -46,12 +46,12 @@ class Book{
         //_pdf.delegate = self
         
         // Start loading remote data in background
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .utility).async {
             self._image.loadData()
         }
-//        DispatchQueue.global(qos: .background).async {
-//            self._pdf.loadData()
-//        }
+        DispatchQueue.global(qos: .background).async {
+            self._pdf.loadData()
+        }
     }
     
     func formattedListOfAuthors() -> String{
@@ -197,6 +197,10 @@ extension Book: AsyncDataDelegate{
     
     func asyncData(_ sender: AsyncData, willStartLoadingFrom url: URL) {
         print("Starting with \(url)")
+    }
+    
+    func asyncData(_ sender: AsyncData, didFailLoadingFrom url: URL, error: NSError){
+        print("Error loading \(url).\n \(error)")
     }
 }
 

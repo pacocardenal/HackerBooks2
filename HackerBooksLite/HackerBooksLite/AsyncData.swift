@@ -128,6 +128,7 @@ protocol AsyncDataDelegate : class{
     func asyncData(_ sender: AsyncData, shouldStartLoadingFrom url: URL )->Bool
     func asyncData(_ sender: AsyncData, willStartLoadingFrom url: URL)
     func asyncData(_ sender: AsyncData, didEndLoadingFrom url: URL)
+    func asyncData(_ sender: AsyncData, didFailLoadingFrom url: URL, error: NSError)
     
 }
 // Default implemntation for infrequently used methods
@@ -139,6 +140,10 @@ extension AsyncDataDelegate {
     func asyncData(_ sender: AsyncData, willStartLoadingFrom url: URL){}
     
     func asyncData(_ sender: AsyncData, didEndLoadingFrom url: URL){}
+    
+    func asyncData(_ sender: AsyncData, didFailLoadingFrom url: URL, error: NSError){
+        print("Error loading \(url).\n \(error)")
+    }
 }
 
 
