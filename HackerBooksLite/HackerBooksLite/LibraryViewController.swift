@@ -109,7 +109,13 @@ class LibraryViewController: UITableViewController {
         let tag = _model.tags[indexPath.section]
         let book = _model.book(forTagName: tag._name, at: indexPath.row)!
         
-        delegate?.libraryViewController(self, didSelect: book)
+        // Create the VC
+        let bookVC = BookViewController(model: book)
+        
+        // Load it
+        navigationController?.pushViewController(bookVC, animated: true)
+        
+        
         
     }
     

@@ -74,8 +74,8 @@ class  AsyncData {
         let local = localURL(forRemoteURL: url)
         do{
             try data.write(to: local, options: .atomic)
-        }catch{
-            print("Error saving to \(local)")
+        }catch let error as NSError{
+            delegate?.asyncData(self, fileSystemDidFailAt: url, error: error)
         }
         
     }
@@ -97,8 +97,9 @@ class  AsyncData {
                 try fm.createDirectory(at: url,
                                        withIntermediateDirectories: true,
                                        attributes: [:])
-            }catch{
-                print("Unable to create directory \(url)")
+            }catch let error as NSError{
+                print(error)
+                
             }
         }
         
@@ -129,6 +130,8 @@ protocol AsyncDataDelegate : class{
     func asyncData(_ sender: AsyncData, willStartLoadingFrom url: URL)
     func asyncData(_ sender: AsyncData, didEndLoadingFrom url: URL)
     func asyncData(_ sender: AsyncData, didFailLoadingFrom url: URL, error: NSError)
+    func asyncData(_ sender: AsyncData, fileSystemDidFailAt url: URL, error: NSError)
+
     
 }
 // Default implemntation for infrequently used methods
@@ -144,6 +147,12 @@ extension AsyncDataDelegate {
     func asyncData(_ sender: AsyncData, didFailLoadingFrom url: URL, error: NSError){
         print("Error loading \(url).\n \(error)")
     }
+    
+    func asyncData(_ sender: AsyncData, fileSystemDidFailAt url: URL, error: NSError){
+        print("Error at \(url).\n \(error)")
+    }
+    
+    
 }
 
 
@@ -179,8 +188,8 @@ extension AsyncData{
         let local = localURL(forRemoteURL: url)
         do{
             try fm.removeItem(at: local)
-        }catch{
-            print("Error deleting \(local)")
+        }catch let error as NSError{
+            delegate?.asyncData(self, fileSystemDidFailAt: local, error: error)
         }
         
         
@@ -194,8 +203,8 @@ extension AsyncData{
         let local = sandboxSubfolderURL()
         do{
             try fm.removeItem(at: local)
-        }catch{
-            print("Error deleting folder at \(local)")
+        }catch let error as NSError{
+            print("Error deleting folder at \(local). \(error)")
         }
     }
     

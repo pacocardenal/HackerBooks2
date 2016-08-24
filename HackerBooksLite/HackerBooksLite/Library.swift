@@ -17,6 +17,8 @@ class Library {
     private
     var _books : Books
     
+    var _bookObserver : NSObjectProtocol?
+    
     //MARK: - Lifecycle
     init(books : [Book]){
         
@@ -98,9 +100,8 @@ class Library {
             return _books.keys.sorted()
         }
     }
+    
 }
-
-
 
 
 

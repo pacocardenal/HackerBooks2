@@ -23,10 +23,29 @@ class BookViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-
+    //MARK: - Outlets
+    @IBOutlet weak var coverView: UIImageView!
+    @IBOutlet weak var favoriteItem: UIBarButtonItem!
+    
+    //MARK: - Actions
+    @IBAction func readBook(_ sender: AnyObject) {
+    }
+    
+    @IBAction func switchFavorite(_ sender: AnyObject) {
+        _model.isFavorite = !_model.isFavorite
+        
+    }
     //MARK: - Syncing
     func syncViewWithModel(book: Book){
-        //TODO: Implement this!
+        
+        coverView.image = UIImage(data: _model._image.data)
+        title = _model.title
+        if _model.isFavorite{
+            favoriteItem.title = "★"
+        }else{
+            favoriteItem.title = "☆"
+        }
+        title = _model.title
         
     }
     
@@ -34,6 +53,7 @@ class BookViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         startObserving(book: _model)
+        syncViewWithModel(book: _model)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
