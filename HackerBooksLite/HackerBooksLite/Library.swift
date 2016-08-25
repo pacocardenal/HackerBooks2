@@ -134,6 +134,7 @@ extension Library{
             }else{
                 // remove it
                 self._books.remove(value: book, fromKey: fav)
+
             }
             
         }

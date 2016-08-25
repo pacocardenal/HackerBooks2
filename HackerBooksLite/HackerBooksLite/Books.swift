@@ -103,7 +103,7 @@ extension Book: Hashable{
     
     var proxyForHashing : String{
         get{
-            return "\(_title)\(_authors)\(_tags)"
+            return "\(_title)\(_authors)"
         }
     }
     var hashValue: Int {
