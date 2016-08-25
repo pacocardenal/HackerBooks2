@@ -121,6 +121,28 @@ struct MultiDictionary<Key : Hashable, Value : Hashable>{
             _dict[key] = [value]
         }
     }
+    
+    // Removes a value from an existing bucket. If the value or key isn't
+    // there, it does nothing.
+    // If after removing, the bucket is empty, it get's removed also
+    public
+    mutating func remove(value: Value, fromKey key: Key){
+        
+        guard var bucket = _dict[key] else{
+            return
+        }
+     
+        guard bucket.contains(value) else{
+            return
+        }
+        
+        bucket.remove(value)    // Since Set is a value type, a copy was made at this point!
+        if bucket.isEmpty{
+            _dict.removeValue(forKey: key)
+        }else{
+            _dict[key] = bucket // otherwise the bucket in dict is still unchanged!
+        }
+    }
 }
 
 

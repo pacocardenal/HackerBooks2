@@ -94,4 +94,55 @@ class MultiDictionaryTests: XCTestCase {
    
     }
     
+    
+    func testAddItemToBucket(){
+        
+
+        d.insert(value: "High Valyrian", forKey: "languages")
+        
+        XCTAssertTrue(d.count == 1)
+        XCTAssertEqual(d.countBuckets, 1)
+        XCTAssertTrue((d["languages"]!.contains("High Valyrian")))
+        
+        
+        d.insert(value: "Dothraki", forKey: "languages")
+        
+        XCTAssertTrue(d.count == 2)
+        XCTAssertEqual(d.countBuckets, 1)
+        XCTAssertTrue((d["languages"]!.contains("Dothraki")))
+
+        
+    }
+    
+    func testRemoveItems(){
+        
+        d.insert(value: "High Valyrian", forKey: "languages")
+        
+        d.remove(value: "Chiquistaní", fromKey: "languages") // NOP
+        d.remove(value: "Tyrion", fromKey: "NBA")            // NOP
+        XCTAssertTrue(d.count == 1)
+        XCTAssertEqual(d.countBuckets, 1)
+
+        d.insert(value: "Dothraki", forKey: "languages")
+        
+        d.remove(value: "Dothraki", fromKey: "languages")
+        XCTAssertTrue(d.count == 1)
+        XCTAssertEqual(d.countBuckets, 1)
+        XCTAssertFalse((d["languages"]?.contains("Dothraki"))!)
+        
+        d.remove(value: "High Valyrian", fromKey: "languages")
+        XCTAssertTrue(d.count == 0)
+        XCTAssertEqual(d.countBuckets, 0)
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

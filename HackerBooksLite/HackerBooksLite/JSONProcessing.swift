@@ -107,7 +107,6 @@ func validate(dictionary dict: JSONDictionary) throws{
         
     }
     
-    // Try to check if pdf and image are urls, with NSDataDetector
     try isMissing()
     
 }

@@ -14,7 +14,6 @@ typealias Books = MultiDictionary<Tag, Book>
 //MARK: - Library
 class Library {
     
-    private
     var _books : Books
     
     var _bookObserver : NSObjectProtocol?
@@ -26,6 +25,12 @@ class Library {
         
         loadBooks(bookList: books)
         
+        setupNotifications()
+        
+    }
+    
+    deinit {
+        tearDownNotifications()
     }
     
     private
@@ -103,6 +108,43 @@ class Library {
     
 }
 
+//MARK: - Notifications
+extension Library{
+    
+    // We observe the BookDidChange notification that
+    // tells me that the favorite switch has been flipped
+    func setupNotifications(){
+        let nc = NotificationCenter.default
+        _bookObserver = nc.addObserver(forName: BookDidChange, object: nil, queue: nil){
+            (n: Notification) in
+            
+            // Extract the book
+            let book = n.userInfo![BookKey] as! Book
+            
+            
+            // Create a Favorite tag
+            let fav = Tag.favoriteTag()
+            
+            // if it's favorite, add it to the Favorite bucket,
+            // otherwise remove it from there
+
+            if book.isFavorite{
+                // Add it
+                self._books.insert(value: book, forKey: fav)
+            }else{
+                // remove it
+                self._books.remove(value: book, fromKey: fav)
+            }
+            
+        }
+    }
+    
+    func tearDownNotifications(){
+        
+        let nc = NotificationCenter.default
+        nc.removeObserver(_bookObserver)
+    }
+}
 
 
 

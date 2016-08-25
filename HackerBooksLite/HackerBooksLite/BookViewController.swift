@@ -29,6 +29,10 @@ class BookViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func readBook(_ sender: AnyObject) {
+        
+        let pVC = PDFViewController(model: _model)
+        navigationController?.pushViewController(pVC, animated: true)
+        
     }
     
     @IBAction func switchFavorite(_ sender: AnyObject) {
@@ -88,3 +92,5 @@ extension BookViewController: LibraryViewControllerDelegate{
         
     }
 }
+
+

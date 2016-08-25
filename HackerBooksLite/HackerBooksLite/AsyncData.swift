@@ -15,18 +15,32 @@ import UIKit
 public
 class  AsyncData {
     
+    var i = 0
+    
     let url     : URL
-    public var data    : Data
+    var _data    : Data
+    private var _hasExternalData = false
     weak public var delegate: AsyncDataDelegate?
     
     
+    var data : Data{
+        get{
+            if !_hasExternalData{
+                DispatchQueue.global(qos: .default).async {
+                    self.loadData()
+                }
+            }
+            return _data
+        }
+    }
+    
     init(url: URL, defaultData : Data){
         self.url = url
-        self.data = defaultData
+        self._data = defaultData
     }
     
     //MARK: - Data Fetching
-    public
+    private
     func loadData(){
         
         if loadLocalData() == false{
@@ -40,7 +54,11 @@ class  AsyncData {
         let fm = FileManager.default
         let local = localURL(forRemoteURL: url)
         if fm.fileExists(atPath: local.path){
-            data = try! Data(contentsOf: local)
+            delegate?.asyncData(self, willStartLoadingFrom: local)
+            _data = try! Data(contentsOf: local)
+            _hasExternalData = true
+            delegate?.asyncData(self, didEndLoadingFrom: local)
+            sendNotification()
             return true
         }else{
             return false
@@ -57,11 +75,13 @@ class  AsyncData {
                 let tmpData = try! Data(contentsOf: self.url)
                 
                 DispatchQueue.main.async {
-                    self.data = tmpData
+                    self._hasExternalData = true
+                    self._data = tmpData
                     
                     self.delegate?.asyncData(self, didEndLoadingFrom: self.url)
                     self.sendNotification()
                     self.saveToLocalStorage()
+                    self._hasExternalData = true
                 }
             }
             
@@ -163,13 +183,14 @@ extension AsyncData{
     func sendNotification(){
         
         let n = Notification(name: AsyncDataDidEndLoading,
-                             object: self, userInfo: ["url" : url, "data" : data])
+                             object: self, userInfo: ["url" : url, "data" : _data])
         
         let nc = NotificationCenter.default
         
         nc.post(n)
         
-        
+        i = i + 1
+        print("Async \(url) --  \(i)")
     }
 }
 

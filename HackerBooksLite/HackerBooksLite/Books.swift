@@ -43,15 +43,9 @@ class Book{
         
         // Set delegate
         _image.delegate = self
-        //_pdf.delegate = self
+        _pdf.delegate = self
         
-        // Start loading remote data in background
-        DispatchQueue.global(qos: .utility).async {
-            self._image.loadData()
-        }
-        DispatchQueue.global(qos: .background).async {
-            self._pdf.loadData()
-        }
+        
     }
     
     func formattedListOfAuthors() -> String{
@@ -151,6 +145,8 @@ extension BookDelegate{
 }
 
 let BookDidChange = Notification.Name(rawValue: "io.keepCoding.BookDidChange")
+let BookKey = "io.keepCoding.BookDidChange.BookKey"
+
 let BookCoverImageDidDownload = Notification.Name(rawValue: "io.keepCoding.BookCoverImageDidDownload")
 let BookPDFDidDownload = Notification.Name(rawValue: "io.keepCoding.BookPDFDidDownload")
 
@@ -158,7 +154,7 @@ extension Book{
     
     func sendNotification(name: Notification.Name){
         
-        let n = Notification(name: name, object: self, userInfo: [:])
+        let n = Notification(name: name, object: self, userInfo: [BookKey:self])
         let nc = NotificationCenter.default
         nc.post(n)
         

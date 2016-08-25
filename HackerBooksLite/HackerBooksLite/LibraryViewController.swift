@@ -32,12 +32,11 @@ class LibraryViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        startObservingBooks()
+        setupNotifications()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        stopObservingBooks()
+    deinit {
+        tearDownNotifications()
     }
     
 
@@ -130,7 +129,7 @@ class LibraryViewController: UITableViewController {
     // and reloads the table
     var bookObserver : NSObjectProtocol?
     
-    func startObservingBooks(){
+    func setupNotifications() {
         
         let nc = NotificationCenter.default
         bookObserver = nc.addObserver(forName: BookDidChange, object: nil, queue: nil)
@@ -139,7 +138,7 @@ class LibraryViewController: UITableViewController {
         }
     }
     
-    func stopObservingBooks(){
+    func tearDownNotifications(){
         
         let nc = NotificationCenter.default
         nc.removeObserver(self.bookObserver)
