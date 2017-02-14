@@ -77,7 +77,10 @@ class BookViewController: UIViewController {
     }
     
     func stopObserving(book:Book){
-        _nc.removeObserver(bookObserver)
+        guard let observer = bookObserver else{
+            return
+        }
+        _nc.removeObserver(observer)
     }
     
 }

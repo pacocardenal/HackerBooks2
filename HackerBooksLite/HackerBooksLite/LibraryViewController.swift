@@ -139,9 +139,11 @@ class LibraryViewController: UITableViewController {
     }
     
     func tearDownNotifications(){
-        
+        guard let observer = bookObserver else{
+            return
+        }
         let nc = NotificationCenter.default
-        nc.removeObserver(self.bookObserver)
+        nc.removeObserver(observer)
     }
 
 }

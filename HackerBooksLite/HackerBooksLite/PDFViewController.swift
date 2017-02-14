@@ -64,8 +64,11 @@ extension PDFViewController{
     
     func tearDownNotifications(){
         
+        guard let observer = _bookObserver else{
+            return
+        }
         let nc = NotificationCenter.default
-        nc.removeObserver(_bookObserver)
+        nc.removeObserver(observer)
         _bookObserver = nil
     }
 }

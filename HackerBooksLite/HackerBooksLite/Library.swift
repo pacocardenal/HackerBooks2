@@ -141,9 +141,11 @@ extension Library{
     }
     
     func tearDownNotifications(){
-        
+        guard let observer = _bookObserver else{
+            return
+        }
         let nc = NotificationCenter.default
-        nc.removeObserver(_bookObserver)
+        nc.removeObserver(observer)
     }
 }
 
