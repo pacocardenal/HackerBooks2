@@ -47,6 +47,7 @@ extension LibraryViewController { //: UITableViewDelegate, UITableViewDataSource
         
         cell.bookTagCoreData = self.fetchedResultsControllerBookTag.object(at: indexPath)
         print(indexPath.section, indexPath.row)
+        
         //cell.textLabel?.text = self.fetchedResultsControllerBookTag.object(at: indexPath).book?.title
 
         //let book = self.fetchedResultsControllerBookTag.object(at: indexPath).book

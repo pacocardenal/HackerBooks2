@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E34A55DD1E6CCBF70073DBD6 /* UIKit+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A55DC1E6CCBF70073DBD6 /* UIKit+Utils.swift */; };
 		E38B764F1E69D74600B36854 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38B764E1E69D74600B36854 /* CoreData.framework */; };
 		E38B76521E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E38B76501E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld */; };
 		E38B76551E69D82400B36854 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B76541E69D82400B36854 /* CoreDataManager.swift */; };
@@ -81,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E34A55DC1E6CCBF70073DBD6 /* UIKit+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Utils.swift"; sourceTree = "<group>"; };
 		E38B764E1E69D74600B36854 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E38B76511E69D76500B36854 /* LibraryCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LibraryCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E38B76541E69D82400B36854 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E34A55DB1E6CCBDE0073DBD6 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				E34A55DC1E6CCBF70073DBD6 /* UIKit+Utils.swift */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		E38B764D1E69D74500B36854 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +349,7 @@
 		EDEFFBD51D35AAA700A5E75C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				E34A55DB1E6CCBDE0073DBD6 /* Framework */,
 				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
 				EDA79C591D66A226001A27F7 /* Controllers */,
 				ED4908A21D5D02BA00212410 /* Model */,
@@ -538,6 +549,7 @@
 				E38B76571E69DC5A00B36854 /* LibraryViewController+NSFetchResultController.swift in Sources */,
 				E38B76521E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld in Sources */,
 				EDA79C4A1D63AF98001A27F7 /* Library.swift in Sources */,
+				E34A55DD1E6CCBF70073DBD6 /* UIKit+Utils.swift in Sources */,
 				E3B2433A1E6C12B8003BE2FA /* AnnotationDetailViewController.swift in Sources */,
 				E3F1268E1E6B329D00C9F954 /* TagCoreData+Utils.swift in Sources */,
 				EDA79C581D66A219001A27F7 /* LibraryViewController.swift in Sources */,

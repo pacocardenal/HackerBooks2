@@ -49,6 +49,7 @@ class BookTableViewCell: UITableViewCell {
         set {
             _bookTagCoreData = newValue
             titleView.text = newValue.book?.title
+            coverView.image = UIImage(named: "emptyCookCover.png")
 //            let a = newValue.book?.authors
 //            if let b = a?.allObjects {
 //                let c = b as! AuthorCoreData
