@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E38B764F1E69D74600B36854 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38B764E1E69D74600B36854 /* CoreData.framework */; };
+		E38B76521E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E38B76501E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld */; };
+		E38B76551E69D82400B36854 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B76541E69D82400B36854 /* CoreDataManager.swift */; };
+		E38B76571E69DC5A00B36854 /* LibraryViewController+NSFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B76561E69DC5A00B36854 /* LibraryViewController+NSFetchResultController.swift */; };
+		E38B765A1E69DCC900B36854 /* Books+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B76591E69DCC900B36854 /* Books+Utils.swift */; };
+		E3B2432C1E6C0134003BE2FA /* BookCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B2432A1E6C0134003BE2FA /* BookCoreDataViewController.swift */; };
+		E3B2432D1E6C0134003BE2FA /* BookCoreDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B2432B1E6C0134003BE2FA /* BookCoreDataViewController.xib */; };
+		E3B2433A1E6C12B8003BE2FA /* AnnotationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B243381E6C12B8003BE2FA /* AnnotationDetailViewController.swift */; };
+		E3B2433B1E6C12B8003BE2FA /* AnnotationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B243391E6C12B8003BE2FA /* AnnotationDetailViewController.xib */; };
+		E3B2433D1E6C174B003BE2FA /* AnnotationViewController+NSFetchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B2433C1E6C174B003BE2FA /* AnnotationViewController+NSFetchController.swift */; };
+		E3B243401E6C182B003BE2FA /* AnnotationCoreData+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B2433F1E6C182B003BE2FA /* AnnotationCoreData+Utils.swift */; };
+		E3B243491E6C260F003BE2FA /* AnnotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B243471E6C260F003BE2FA /* AnnotationViewController.swift */; };
+		E3B2434A1E6C260F003BE2FA /* AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B243481E6C260F003BE2FA /* AnnotationViewController.xib */; };
+		E3F1268C1E6B0C7E00C9F954 /* LibraryViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F1268B1E6B0C7E00C9F954 /* LibraryViewController+UITableView.swift */; };
+		E3F1268E1E6B329D00C9F954 /* TagCoreData+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F1268D1E6B329D00C9F954 /* TagCoreData+Utils.swift */; };
+		E3F126901E6B485E00C9F954 /* BookTagCoreData+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F1268F1E6B485E00C9F954 /* BookTagCoreData+Utils.swift */; };
 		ED07720F1D595AE60074331F /* AsyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07720E1D595AE60074331F /* AsyncData.swift */; };
 		ED0788C21D60D8F200C4773C /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788C11D60D8F200C4773C /* Tags.swift */; };
 		ED0788C31D60D8F200C4773C /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0788C11D60D8F200C4773C /* Tags.swift */; };
@@ -65,6 +81,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E38B764E1E69D74600B36854 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E38B76511E69D76500B36854 /* LibraryCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LibraryCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		E38B76541E69D82400B36854 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E38B76561E69DC5A00B36854 /* LibraryViewController+NSFetchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LibraryViewController+NSFetchResultController.swift"; sourceTree = "<group>"; };
+		E38B76591E69DCC900B36854 /* Books+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Books+Utils.swift"; sourceTree = "<group>"; };
+		E3B2432A1E6C0134003BE2FA /* BookCoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCoreDataViewController.swift; sourceTree = "<group>"; };
+		E3B2432B1E6C0134003BE2FA /* BookCoreDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCoreDataViewController.xib; sourceTree = "<group>"; };
+		E3B243381E6C12B8003BE2FA /* AnnotationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationDetailViewController.swift; sourceTree = "<group>"; };
+		E3B243391E6C12B8003BE2FA /* AnnotationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationDetailViewController.xib; sourceTree = "<group>"; };
+		E3B2433C1E6C174B003BE2FA /* AnnotationViewController+NSFetchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnnotationViewController+NSFetchController.swift"; sourceTree = "<group>"; };
+		E3B2433F1E6C182B003BE2FA /* AnnotationCoreData+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnnotationCoreData+Utils.swift"; sourceTree = "<group>"; };
+		E3B243471E6C260F003BE2FA /* AnnotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationViewController.swift; sourceTree = "<group>"; };
+		E3B243481E6C260F003BE2FA /* AnnotationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationViewController.xib; sourceTree = "<group>"; };
+		E3F1268B1E6B0C7E00C9F954 /* LibraryViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LibraryViewController+UITableView.swift"; sourceTree = "<group>"; };
+		E3F1268D1E6B329D00C9F954 /* TagCoreData+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TagCoreData+Utils.swift"; sourceTree = "<group>"; };
+		E3F1268F1E6B485E00C9F954 /* BookTagCoreData+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BookTagCoreData+Utils.swift"; sourceTree = "<group>"; };
 		ED07720E1D595AE60074331F /* AsyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncData.swift; sourceTree = "<group>"; };
 		ED0788C11D60D8F200C4773C /* Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		ED0788C41D60E07D00C4773C /* TagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
@@ -107,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38B764F1E69D74600B36854 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +160,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E38B764D1E69D74500B36854 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E38B764E1E69D74600B36854 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E38B76531E69D7F300B36854 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E38B76541E69D82400B36854 /* CoreDataManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		E38B76581E69DC6600B36854 /* LibraryController */ = {
+			isa = PBXGroup;
+			children = (
+				EDA79C561D66A219001A27F7 /* LibraryViewController.swift */,
+				E38B76561E69DC5A00B36854 /* LibraryViewController+NSFetchResultController.swift */,
+				E3F1268B1E6B0C7E00C9F954 /* LibraryViewController+UITableView.swift */,
+			);
+			name = LibraryController;
+			sourceTree = "<group>";
+		};
+		E3B2433E1E6C1758003BE2FA /* AnnotationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3B243471E6C260F003BE2FA /* AnnotationViewController.swift */,
+				E3B243481E6C260F003BE2FA /* AnnotationViewController.xib */,
+				E3B2433C1E6C174B003BE2FA /* AnnotationViewController+NSFetchController.swift */,
+			);
+			name = AnnotationViewController;
+			sourceTree = "<group>";
+		};
 		ED4908A21D5D02BA00212410 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +203,11 @@
 				ED0788C11D60D8F200C4773C /* Tags.swift */,
 				ED0788CB1D6165A000C4773C /* Library.swift */,
 				EDB3AE681D67A5F70023A807 /* JSONProcessing.swift */,
+				E38B76501E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld */,
+				E38B76591E69DCC900B36854 /* Books+Utils.swift */,
+				E3F1268D1E6B329D00C9F954 /* TagCoreData+Utils.swift */,
+				E3F1268F1E6B485E00C9F954 /* BookTagCoreData+Utils.swift */,
+				E3B2433F1E6C182B003BE2FA /* AnnotationCoreData+Utils.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +219,7 @@
 				ED8E54161D359AB100DD8F94 /* HackerBooksLiteTests */,
 				ED8E54211D359AB100DD8F94 /* HackerBooksLiteUITests */,
 				ED8E53FE1D359AB100DD8F94 /* Products */,
+				E38B764D1E69D74500B36854 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,7 +238,6 @@
 			children = (
 				EDEFFBD51D35AAA700A5E75C /* App */,
 				EDEFFBD41D35AA9D00A5E75C /* Frameworks */,
-				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
 				ED8E54091D359AB100DD8F94 /* Assets.xcassets */,
 				ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */,
 				ED8E540E1D359AB100DD8F94 /* Info.plist */,
@@ -195,11 +269,16 @@
 			isa = PBXGroup;
 			children = (
 				EDA79C551D66A219001A27F7 /* Controllers.swift */,
-				EDA79C561D66A219001A27F7 /* LibraryViewController.swift */,
+				E38B76581E69DC6600B36854 /* LibraryController */,
 				EDB3AE821D6ACAE80023A807 /* BookViewController.swift */,
 				EDB3AE831D6ACAE80023A807 /* BookViewController.xib */,
 				ED3B1E091D6E5A690000A7C6 /* PDFViewController.swift */,
 				ED3B1E0A1D6E5A690000A7C6 /* PDFViewController.xib */,
+				E3B2432A1E6C0134003BE2FA /* BookCoreDataViewController.swift */,
+				E3B2432B1E6C0134003BE2FA /* BookCoreDataViewController.xib */,
+				E3B2433E1E6C1758003BE2FA /* AnnotationViewController */,
+				E3B243381E6C12B8003BE2FA /* AnnotationDetailViewController.swift */,
+				E3B243391E6C12B8003BE2FA /* AnnotationDetailViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -260,12 +339,14 @@
 		EDEFFBD51D35AAA700A5E75C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
 				EDA79C591D66A226001A27F7 /* Controllers */,
 				ED4908A21D5D02BA00212410 /* Model */,
 				EDEFFBD71D35AAF300A5E75C /* NetworkUtils */,
 				EDC9E17F1D4AA2AD00E4D047 /* DataStructures */,
 				EDEFFBD61D35AAB300A5E75C /* Resources */,
 				EDB3AE8A1D6BC7950023A807 /* Views */,
+				E38B76531E69D7F300B36854 /* Managers */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -351,12 +432,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = KeepCoding;
 				TargetAttributes = {
 					ED8E53FC1D359AB100DD8F94 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L74TMB66P4;
+						DevelopmentTeam = L29LUZH6XZ;
 						DevelopmentTeamName = "Fernando Rodríguez Romero (Personal Team)";
 						ProvisioningStyle = Automatic;
 					};
@@ -402,10 +483,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB3AE6C1D67E2000023A807 /* books_readable.json in Resources */,
+				E3B2434A1E6C260F003BE2FA /* AnnotationViewController.xib in Resources */,
 				EDB3AE791D6805230023A807 /* emptyPdf.pdf in Resources */,
 				EDB3AE851D6ACAE80023A807 /* BookViewController.xib in Resources */,
 				ED8E540D1D359AB100DD8F94 /* LaunchScreen.storyboard in Resources */,
+				E3B2433B1E6C12B8003BE2FA /* AnnotationDetailViewController.xib in Resources */,
 				EDB3AE891D6BC7890023A807 /* BookTableViewCell.xib in Resources */,
+				E3B2432D1E6C0134003BE2FA /* BookCoreDataViewController.xib in Resources */,
 				ED8E540A1D359AB100DD8F94 /* Assets.xcassets in Resources */,
 				EDB3AE761D68048D0023A807 /* emptyBookCover.png in Resources */,
 				ED3B1E0C1D6E5A690000A7C6 /* PDFViewController.xib in Resources */,
@@ -439,16 +523,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4908A41D5D02DA00212410 /* Books.swift in Sources */,
+				E3F126901E6B485E00C9F954 /* BookTagCoreData+Utils.swift in Sources */,
 				EDB3AE691D67A5F70023A807 /* JSONProcessing.swift in Sources */,
+				E3B243491E6C260F003BE2FA /* AnnotationViewController.swift in Sources */,
 				EDB3AE881D6BC7890023A807 /* BookTableViewCell.swift in Sources */,
+				E3B2433D1E6C174B003BE2FA /* AnnotationViewController+NSFetchController.swift in Sources */,
+				E3B2432C1E6C0134003BE2FA /* BookCoreDataViewController.swift in Sources */,
 				ED3B1E0B1D6E5A690000A7C6 /* PDFViewController.swift in Sources */,
 				EDC9E17D1D4AA2A800E4D047 /* MultiDictionary.swift in Sources */,
 				ED0788C21D60D8F200C4773C /* Tags.swift in Sources */,
+				E38B765A1E69DCC900B36854 /* Books+Utils.swift in Sources */,
+				E3B243401E6C182B003BE2FA /* AnnotationCoreData+Utils.swift in Sources */,
 				ED07720F1D595AE60074331F /* AsyncData.swift in Sources */,
+				E38B76571E69DC5A00B36854 /* LibraryViewController+NSFetchResultController.swift in Sources */,
+				E38B76521E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld in Sources */,
 				EDA79C4A1D63AF98001A27F7 /* Library.swift in Sources */,
+				E3B2433A1E6C12B8003BE2FA /* AnnotationDetailViewController.swift in Sources */,
+				E3F1268E1E6B329D00C9F954 /* TagCoreData+Utils.swift in Sources */,
 				EDA79C581D66A219001A27F7 /* LibraryViewController.swift in Sources */,
+				E3F1268C1E6B0C7E00C9F954 /* LibraryViewController+UITableView.swift in Sources */,
 				EDB3AE841D6ACAE80023A807 /* BookViewController.swift in Sources */,
 				EDA79C571D66A219001A27F7 /* Controllers.swift in Sources */,
+				E38B76551E69D82400B36854 /* CoreDataManager.swift in Sources */,
 				ED8E54011D359AB100DD8F94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,8 +618,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -570,8 +668,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -600,6 +700,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L29LUZH6XZ;
 				INFOPLIST_FILE = HackerBooksLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.Keepcoding.HackerBooksLite;
@@ -612,6 +713,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L29LUZH6XZ;
 				INFOPLIST_FILE = HackerBooksLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.Keepcoding.HackerBooksLite;
@@ -710,6 +812,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E38B76501E69D76500B36854 /* LibraryCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E38B76511E69D76500B36854 /* LibraryCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = E38B76511E69D76500B36854 /* LibraryCoreDataModel.xcdatamodel */;
+			name = LibraryCoreDataModel.xcdatamodeld;
+			path = ../LibraryCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ED8E53F51D359AB100DD8F94 /* Project object */;
 }

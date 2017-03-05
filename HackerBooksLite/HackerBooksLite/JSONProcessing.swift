@@ -60,6 +60,7 @@ func decode(book dict: JSONDictionary) throws -> Book{
     let pdf = AsyncData(url: pdfURL, defaultData: try! Data(contentsOf: defaultPdf))
     
     
+    
     return Book(title: title, authors: authors, tags: tags, pdf: pdf, image: image)
     
 }

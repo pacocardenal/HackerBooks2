@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AnnotationCoreData" representedClassName="AnnotationCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookCoreData" inverseName="note" inverseEntity="BookCoreData" syncable="YES"/>
+    </entity>
+    <entity name="AuthorCoreData" representedClassName="AuthorCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="fullName" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookCoreData" inverseName="authors" inverseEntity="BookCoreData" syncable="YES"/>
+    </entity>
+    <entity name="BookCoreData" representedClassName="BookCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="title" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="authors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AuthorCoreData" inverseName="books" inverseEntity="AuthorCoreData" syncable="YES"/>
+        <relationship name="bookTag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookTagCoreData" inverseName="book" inverseEntity="BookTagCoreData" syncable="YES"/>
+        <relationship name="note" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AnnotationCoreData" inverseName="book" inverseEntity="AnnotationCoreData" syncable="YES"/>
+        <relationship name="pdf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PdfCoreData" inverseName="book" inverseEntity="PdfCoreData" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookCoverPhotoCoreData" inverseName="book" inverseEntity="BookCoverPhotoCoreData" syncable="YES"/>
+    </entity>
+    <entity name="BookCoverPhotoCoreData" representedClassName="BookCoverPhotoCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="remoteUrlString" attributeType="String" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookCoreData" inverseName="photo" inverseEntity="BookCoreData" syncable="YES"/>
+    </entity>
+    <entity name="BookTagCoreData" representedClassName="BookTagCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookCoreData" inverseName="bookTag" inverseEntity="BookCoreData" syncable="YES"/>
+        <relationship name="tag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TagCoreData" inverseName="bookTag" inverseEntity="TagCoreData" syncable="YES"/>
+    </entity>
+    <entity name="PdfCoreData" representedClassName="PdfCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookCoreData" inverseName="pdf" inverseEntity="BookCoreData" syncable="YES"/>
+    </entity>
+    <entity name="TagCoreData" representedClassName="TagCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="bookTag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookTagCoreData" inverseName="tag" inverseEntity="BookTagCoreData" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="AuthorCoreData" positionX="-8246" positionY="-3361" width="128" height="73"/>
+        <element name="BookCoreData" positionX="-8534" positionY="-3523" width="128" height="133"/>
+        <element name="BookTagCoreData" positionX="-8505" positionY="-3223" width="128" height="88"/>
+        <element name="TagCoreData" positionX="-8714" positionY="-3222" width="128" height="73"/>
+        <element name="PdfCoreData" positionX="-8532" positionY="-3735" width="128" height="88"/>
+        <element name="AnnotationCoreData" positionX="-8723" positionY="-3517" width="128" height="73"/>
+        <element name="BookCoverPhotoCoreData" positionX="-8273" positionY="-3513" width="128" height="88"/>
+    </elements>
+</model>

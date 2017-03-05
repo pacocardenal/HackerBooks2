@@ -190,7 +190,7 @@ extension AsyncData{
         nc.post(n)
         
         i = i + 1
-        print("Async \(url) --  \(i)")
+        //print("Async \(url) --  \(i)")
     }
 }
 

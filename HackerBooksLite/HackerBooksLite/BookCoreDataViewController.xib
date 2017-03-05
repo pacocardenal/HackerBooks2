@@ -9,9 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PDFViewController" customModule="HackerBooksLite" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookCoreDataViewController" customModule="HackerBooksLite" customModuleProvider="target">
             <connections>
-                <outlet property="browserView" destination="4RR-yi-P2R" id="x7S-z1-tPb"/>
+                <outlet property="coverView" destination="H2u-Wa-Auq" id="EHV-dq-gvp"/>
+                <outlet property="favoriteItem" destination="Fp3-07-8Az" id="Zwl-WQ-jOq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,25 +21,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4RR-yi-P2R">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </webView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EgH-11-cMd">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2O-M0-7do">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem title="Notes" id="lPf-TS-pGz">
+                        <barButtonItem title="Read" id="IC2-nQ-DSz">
                             <connections>
-                                <action selector="showNotesClicked:" destination="-1" id="byb-ID-Gs0"/>
+                                <action selector="readBook:" destination="-1" id="qBo-gx-mg0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nXw-1u-PS7"/>
+                        <barButtonItem title="☆" id="Fp3-07-8Az">
+                            <connections>
+                                <action selector="switchFavorite:" destination="-1" id="p0H-QK-cf2"/>
                             </connections>
                         </barButtonItem>
                     </items>
                 </toolbar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H2u-Wa-Auq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="33.5" y="54.5"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

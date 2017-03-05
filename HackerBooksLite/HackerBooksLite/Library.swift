@@ -1,15 +1,9 @@
-//
-//  Library.swift
-//  HackerBooksLite
-//
-//  Created by Fernando Rodríguez Romero on 8/14/16.
-//  Copyright © 2016 KeepCoding. All rights reserved.
-//
-
 import Foundation
+import CoreData
 
 //MARK: - MultiDict
 typealias Books = MultiDictionary<Tag, Book>
+
 
 //MARK: - Library
 class Library {
@@ -17,11 +11,12 @@ class Library {
     var _books : Books
     
     var _bookObserver : NSObjectProtocol?
+    var context: NSManagedObjectContext?
     
     //MARK: - Lifecycle
-    init(books : [Book]){
-        
+    init(books : [Book], context: NSManagedObjectContext?){
         _books = Books()
+        self.context = context
         
         loadBooks(bookList: books)
         
@@ -33,9 +28,8 @@ class Library {
         tearDownNotifications()
     }
     
-    private
+    
     func loadBooks(bookList: [Book]){
-        
         for book in bookList{
             for tag in book.tags{
                 _books.insert(value: book, forKey: tag)

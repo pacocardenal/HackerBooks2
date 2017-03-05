@@ -17,7 +17,7 @@ class BookTableViewCell: UITableViewCell {
     
     //MARK: - private interface
     private
-    var _book : Book?
+    var _book : BookCoreData?
     
     private
     let _nc = NotificationCenter.default
@@ -30,11 +30,45 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var authorsView: UILabel!
     @IBOutlet weak var tagsView: UILabel!
     
+    private var _bookCoreData: BookCoreData? = nil
+    var bookCoreData: BookCoreData {
+        get {
+            return _bookCoreData!
+        }
+        set {
+            _bookCoreData = newValue
+            titleView.text = newValue.title
+        }
+    }
+    
+    private var _bookTagCoreData: BookTagCoreData? = nil
+    var bookTagCoreData: BookTagCoreData {
+        get {
+            return _bookTagCoreData!
+        }
+        set {
+            _bookTagCoreData = newValue
+            titleView.text = newValue.book?.title
+//            let a = newValue.book?.authors
+//            if let b = a?.allObjects {
+//                let c = b as! AuthorCoreData
+//                var authors: String = ""
+//                for author in c {
+//                    authors = authors.appending(" \(author.fullName)")
+//                }
+//                authorsView.text = authors
+//            }
+            
+            
+            
+        }
+    }
+    
     //MARK: - Bending the MVC
     // The view will directly observe the model
     // This is OK, when the view is highly specific as
     // in this case
-    func startObserving(book: Book){
+    func startObserving(book: BookCoreData){
         _book = book
         _nc.addObserver(forName: BookCoverImageDidDownload, object: _book, queue: nil) { (n: Notification) in
             self.syncWithBook()
@@ -74,13 +108,13 @@ class BookTableViewCell: UITableViewCell {
                           duration: 0.7,
                           options: [.transitionCrossDissolve],
                           animations: { 
-                            self.coverView.image =  UIImage(data: (self._book?._image.data)!)
+                            self.coverView.image =  UIImage(data: (self.bookCoreData.photo?.data)! as Data)
             }, completion: nil)
         
         
         titleView.text = _book?.title
-        authorsView.text = _book?.formattedListOfAuthors()
-        tagsView.text = _book?.formattedListOfTags()
+//        authorsView.text = _book?.formattedListOfAuthors()
+//        tagsView.text = _book?.formattedListOfTags()
         
     }
     
